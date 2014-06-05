@@ -1,0 +1,8 @@
+{
+	"name": "meteor-recorder",
+	"description": "Meteor wrapper for voice-recorder",
+	"homepage": "https://github.com/scmart/meteor-recorder",
+	"author": "Sedric Mart",
+	"version": "1.0",
+	"git": "https://github.com/scmart/meteor-recorder.git"
+}
