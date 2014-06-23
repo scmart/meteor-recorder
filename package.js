@@ -8,6 +8,6 @@ Package.on_use(function (api) {
 		"recorder/wami/swfobject/swfobject.js",
 		"recorder/wami/recorder.js",
 		"recorder/wami/gui.js",
-		"recorder/voicerecorder.js"
+		"recorder/voicerecord.js"
 	], "client");
 });
