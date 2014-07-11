@@ -3,6 +3,6 @@
 	"description": "Meteor wrapper for voice-recorder",
 	"homepage": "https://github.com/scmart/meteor-recorder",
 	"author": "Sedric Mart",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"git": "https://github.com/scmart/meteor-recorder.git"
 }
