@@ -107,7 +107,14 @@
 	};
 
 	VoiceRecorder.prototype._setupNative = function() {
+		//the following call will prompt the user to allow
+		if (this._callbacks.accessDialogOpen) {
+			this._callbacks.accessDialogOpen();
+		}
 		navigator.getUserMedia({audio: true}, _.bind(function(stream) {
+			if (this._callbacks.accessDialogAccepted) {
+				this._callbacks.accessDialogAccepted();
+			}
 			//setup native recording
 			if (!this._native_audio_context) {
 				this._native_audio_context = new AudioContext();
@@ -116,6 +123,10 @@
 			//input.connect(audio_context.destination);
 			this._native = new Recorder(input);
 		}, this), function(e) {
+			//denied
+			if (this._callbacks.accessDialogDenied) {
+				this._callbacks.accessDialogDenied();
+			}
 			console.log(e);
 		});
 	};
